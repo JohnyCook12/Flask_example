@@ -1,6 +1,6 @@
 from flask import Flask, url_for, render_template
 app = Flask(__name__)                                   # default run function is app. Name = this file name
-
+print(__name__)
 
 @app.route('/')                                         # url of index.
 def index():
@@ -49,3 +49,9 @@ def bububu():
 @app.route('/hlavni/')
 def hlavni_page():
     return render_template('hlavni_stranka.html')
+
+
+
+# ========================== RUN ======================
+if __name__ == '__main__':
+    app.run(debug=True)

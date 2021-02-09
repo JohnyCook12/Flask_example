@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Original Home page</title>
+</head>
+<body>
+<h1> Home page </h1>
+
+<p>{{ content }}</p>
+
+{% for i in content2 %}
+    {% if i == 'Anna' %}
+        <p><b> {{ i }} </b></p>
+    {% else %}
+        <p><i> {{ i }} </i></p>
+    {% endif %}
+{% endfor %}
+
+</body>
+</html>

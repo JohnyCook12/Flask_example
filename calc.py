@@ -41,3 +41,10 @@ def index():
 @app.route('/vysledek/')
 def vysledek_page(cislo):
     return render_template('vysledek.html', zobrazeny_vysledek=str(cislo))
+
+
+
+
+# ========================== RUN ======================
+if __name__ == '__main__':
+    app.run(debug=True)
