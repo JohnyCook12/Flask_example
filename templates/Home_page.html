@@ -1,0 +1,17 @@
+{% extends 'base_bootstrap.html' %}
+{% block title %} Home Page {% endblock %}
+
+{% block content %}
+    <h1>Home Page. Welcome!</h1>
+    This is your home
+
+    {% with messages = get_flashed_messages() %}                      <!-- FLASH all stored MESSAGES -->
+        {% for message in messages %}
+            <p>{{message}}</p>
+        {% endfor %}
+    {% endwith %}
+
+
+    <image src="{{ url_for('static', filename='/images/dulek.jpg') }}">
+
+{% endblock %}
