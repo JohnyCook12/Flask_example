@@ -1,0 +1,25 @@
+{% extends 'base_bootstrap.html' %}
+{% block title %} Speech Recognition Page {% endblock %}
+
+{% block content %}
+
+<h1>Speech Recognition Page</h1>
+
+{% with messages = get_flashed_messages() %}                      <!-- FLASH all stored MESSAGES -->
+    {% for message in messages %}
+        <p>{{message}}</p>
+    {% endfor %}
+{% endwith %}
+
+
+<div id="Speech container">
+    <h1>Upload new speech file: </h1>
+    <form method="post", enctype="multipart/form-data">
+        <p><input type="file" name="my_file"/></p>
+        <p><input type="submit" value="Recognize speech" /></p>
+    </form>
+</div>
+
+{{ result_content }}
+
+{% endblock %}
